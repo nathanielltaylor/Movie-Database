@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+<h1><%= title %></h1>
+
+
+<% movie_info.each do |row| %>
+<p>Year: <%= row["year"] %></p>
+<p>Rating: <%= row["rating"] %>% positive</p>
+<p>Synopsis: <%= row["synopsis"] %></p>
+<p>Studio: <%= row["studio"] %></p>
+<p>Genre: <%= row["genre"] %></p>
+<% end %>
+
+<table>
+       <tr>
+         <th>Cast Member</th>
+         <th>Character</th>
+       </tr>
+       <% cast_info.each do |row| %>
+       <tr>
+         <td><a href='/actors/<%=row['name']%>'><%=row['name']%></a></td>
+         <td><%=row["character"]%></td>
+         <td></td>
+       </tr>
+    <% end %>
+</table>
+</body>
+</html>

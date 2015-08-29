@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Actors</title>
+</head>
+<body>
+
+<h1>Actors</h1>
+<ul>
+  <% names.each do |name| %>
+    <li><a href='actors/<%= name %>'><%= name %></a></li>
+  <% end %>
+</ul>
+<p><a href="/">Home</a></p>
+</body>
+</html>

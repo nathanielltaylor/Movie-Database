@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Movies</title>
+</head>
+<body>
+
+  <h1>All Movies</h1>
+
+
+  <table border = "1">
+         <tr>
+           <th>Title</th>
+           <th>Year</th>
+           <th>Rating</th>
+           <th>Studio</th>
+           <th>Genre</th>
+         </tr>
+         <% movies.each do |row| %>
+         <tr>
+           <td><a href='movies/<%=row['title']%>'><%=row['title']%></a></td>
+           <td><%=row["year"]%></td>
+           <td><%=row["rating"]%></td>
+           <td><%=row["studio"]%></td>
+           <td><%=row["genre"]%></td>
+           <td></td>
+         </tr>
+        <% end %>
+      </table>
+
+<p><a href="/">Home</a></p>
+</body>
+</html>
